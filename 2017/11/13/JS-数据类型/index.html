@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Lu Fangyong"><title>JS-数据类型 · lfy</title><meta name="description" content="js基础1.1 JavaScript的基本组成
+ECMAScript： 语法规范
+DOM（Document Object MOdel）： 操作dom元素的api
+BOM（Browser Object Model）： 操作浏览器对象的api
+
+2.0 JavaScript数据类型2.1 简单数据类型
+"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">lfy</a></h3><div class="description"><p>前端的一个小菜鸟，还有很多地方需要学习...</p></div></div></div><ul class="social-links"><li><a href="http://github.com/lfyo"><i class="fa fa-github">       </i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>JS-数据类型</a></h3></div><div class="post-content"><h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h2 id="1-1-JavaScript的基本组成"><a href="#1-1-JavaScript的基本组成" class="headerlink" title="1.1 JavaScript的基本组成"></a>1.1 JavaScript的基本组成</h2><ul>
+<li>ECMAScript： 语法规范</li>
+<li>DOM（Document Object MOdel）： 操作dom元素的api</li>
+<li>BOM（Browser Object Model）： 操作浏览器对象的api</li>
+</ul>
+<h2 id="2-0-JavaScript数据类型"><a href="#2-0-JavaScript数据类型" class="headerlink" title="2.0 JavaScript数据类型"></a>2.0 JavaScript数据类型</h2><h3 id="2-1-简单数据类型"><a href="#2-1-简单数据类型" class="headerlink" title="2.1 简单数据类型"></a>2.1 简单数据类型</h3><ul>
+<li>string</li>
+<li>number</li>
+<li>boolern</li>
+<li>undefined</li>
+</ul>
+<h3 id="2-2-复杂数据类型"><a href="#2-2-复杂数据类型" class="headerlink" title="2.2 复杂数据类型"></a>2.2 复杂数据类型</h3><ul>
+<li>Object</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Function</li>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>null</li>
+<li>Math</li>
+</ul>
+<h2 id="3-1-部分关键字的使用"><a href="#3-1-部分关键字的使用" class="headerlink" title="3.1 部分关键字的使用"></a>3.1 部分关键字的使用</h2><p><strong>in</strong></p>
+<blockquote>
+<p>判断属性是否存在于对象中</p>
+</blockquote>
+<p><strong>for in</strong></p>
+<blockquote>
+<p>遍历对象的键</p>
+</blockquote>
+<p><strong>typeof</strong></p>
+<blockquote>
+<ul>
+<li>判断对象的类型，返回值是string类型的 </li>
+<li>引用类型中，除了function其他的对象都是object类型</li>
+</ul>
+</blockquote>
+<p><strong>delete</strong></p>
+<blockquote>
+<ul>
+<li>删除对象的属性</li>
+<li>删除未使用var声明的变量</li>
+<li>返回值为boolean 表示是否删除成功</li>
+<li>注意：删除的属性如果不存在，返回true</li>
+<li>删除的如果是原型中的属性，返回true 但是删除不成功</li>
+</ul>
+</blockquote>
+<p><strong>break continue</strong></p>
+<blockquote>
+<ul>
+<li>break 用来终止循环</li>
+<li>continue 用来跳出当前循环，继续下次循环<br><strong>=== 和 ==</strong></li>
+<li>=== 要判断数据类型和值是否相等</li>
+<li>== 值判断值是否相等<br><strong>|| 和 &amp;&amp;</strong></li>
+<li>表达式1 || 表达式2  如果 表达式1 就 返回 表达式1 否则 返回 表达式2</li>
+<li>表达式1 &amp;&amp; 表达式2  如果 表达式1 就 返回 表达式2 否则 返回 表达式1</li>
+</ul>
+</blockquote>
+<h2 id="4-1-值类型和引用类型"><a href="#4-1-值类型和引用类型" class="headerlink" title="4.1 值类型和引用类型"></a>4.1 值类型和引用类型</h2><ul>
+<li>值类型： 存储的是数据本身的值就是值类型的数据</li>
+<li><p>引用类型：存储的是数据的地址的值就是引用类型的数据，数据自己在内存中单独存储</p>
+</li>
+<li><p>值类型的赋值：直接将存储的数据复制一份赋值给新的变量 两个变量独立存在互不影响</p>
+</li>
+<li>引用类型赋值：将存储的数据的地址复制一份赋值给新的额便令 两个变量指向同一个对象，相互影响</li>
+</ul>
+<h2 id="5-1-异常处理"><a href="#5-1-异常处理" class="headerlink" title="5.1 异常处理"></a>5.1 异常处理</h2><ul>
+<li>异常的最大的特征：一旦发生异常，后面的代码都不会再执行</li>
+<li>异常处理语句 try catch finally</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//可能出现异常的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(e)&#123;</span><br><span class="line">    <span class="comment">//e就是出现异常的异常信息</span></span><br><span class="line">    <span class="comment">//出现异常后的处理代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//不管有没有出现异常，都会执行的代码</span></span><br><span class="line">    <span class="comment">//一般用来释放资源</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如何手动抛出异常：  throw  任何东西，  catch中会抓到该东西</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-11-13</span><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,http://yoursite.com/2017/11/13/JS-数据类型/,lfy,JS-数据类型,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
