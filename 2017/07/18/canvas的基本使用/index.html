@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Snail的博客</title>
+  <title>canvas的基本使用 | Snail的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Snail的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="canvas标签的使用 默认宽：300，高：150 标签123&amp;lt;canvas&amp;gt;    --不支持的浏览器可以看见的内容&amp;lt;/canvas&amp;gt;   绘制环境 getContext(‘2d), 目前支持2d的场景">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas的基本使用">
+<meta property="og:url" content="http://yoursite.com/2017/07/18/canvas的基本使用/index.html">
 <meta property="og:site_name" content="Snail的博客">
+<meta property="og:description" content="canvas标签的使用 默认宽：300，高：150 标签123&amp;lt;canvas&amp;gt;    --不支持的浏览器可以看见的内容&amp;lt;/canvas&amp;gt;   绘制环境 getContext(‘2d), 目前支持2d的场景">
 <meta property="og:locale" content="chinese">
+<meta property="og:updated_time" content="2017-12-18T09:26:08.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Snail的博客">
+<meta name="twitter:title" content="canvas的基本使用">
+<meta name="twitter:description" content="canvas标签的使用 默认宽：300，高：150 标签123&amp;lt;canvas&amp;gt;    --不支持的浏览器可以看见的内容&amp;lt;/canvas&amp;gt;   绘制环境 getContext(‘2d), 目前支持2d的场景">
   
     <link rel="alternative" href="/atom.xml" title="Snail的博客" type="application/atom+xml">
   
@@ -146,76 +150,362 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-canvas的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/13/JS-数据类型/" class="archive-article-date">
-  	<time datetime="2017-11-13T13:28:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/13/JS-数据类型/">JS-数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      canvas的基本使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/18/canvas的基本使用/" class="archive-article-date">
+        
+        <a href="/2017/07/18/canvas的基本使用/" class="archive-article-date">
   	<time datetime="2017-07-18T09:19:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/18/canvas的基本使用/">canvas的基本使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="canvas标签的使用"><a href="#canvas标签的使用" class="headerlink" title="canvas标签的使用"></a>canvas标签的使用</h2><ul>
+<li>默认宽：300，高：150</li>
+<li>标签<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span>&gt;</span></span><br><span class="line">    --不支持的浏览器可以看见的内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="绘制环境"><a href="#绘制环境" class="headerlink" title="绘制环境"></a>绘制环境</h2><ul>
+<li>getContext(‘2d), 目前支持2d的场景<a id="more"></a>
+</li>
+</ul>
+<h2 id="绘制方块"><a href="#绘制方块" class="headerlink" title="绘制方块"></a>绘制方块</h2><ul>
+<li>fillRect(L,T,W,H): 默认颜色是黑色</li>
+<li>strokeRect(L,T,W,H): 带边框的方块<ul>
+<li>默认一个像素黑色边框，显示出来的不一样的原因：类似ps都是一个一个的像素方块，当坐标点刚好占据一个像素的一般，系统就会默认填充，两边都会补上半个像素，就形成了2个像素的边框</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置绘图"><a href="#设置绘图" class="headerlink" title="设置绘图"></a>设置绘图</h2><ul>
+<li>fillStyle：填充颜色（绘制canvas是有顺序的）</li>
+<li>lineWidth：线宽度，是一个数值</li>
+<li>strokeStyle: 边线颜色</li>
+</ul>
+<h2 id="边界绘制"><a href="#边界绘制" class="headerlink" title="边界绘制"></a>边界绘制</h2><ul>
+<li>lineJoin:边界连接点样式<ul>
+<li>miter（默认）、round（圆角）、bevel（斜角）</li>
+</ul>
+</li>
+<li>lineCap：端点样式<ul>
+<li>butt（默认）、round（圆角）、square（高度多出为宽度一般的值）</li>
+</ul>
+</li>
+</ul>
+<h2 id="绘制路径-1"><a href="#绘制路径-1" class="headerlink" title="绘制路径_1"></a>绘制路径_1</h2><ul>
+<li>beginPath：开始绘制路径</li>
+<li>closePath：结束绘制路径</li>
+<li>moveTo：移动到绘制的新目标点</li>
+<li>lineTo ：新的目标点</li>
+</ul>
+<p>##绘制路径_2</p>
+<ul>
+<li>stroke：画线，默认黑色</li>
+<li>fill：填充，默认黑色</li>
+<li>rect：矩形区域</li>
+<li>clearRect：删除一个画布的矩形区域</li>
+<li>save：保存路径</li>
+<li>restore：恢复路径</li>
+<li>小问题：把canvas的宽高样式不写在行间，就像是被缩放</li>
+</ul>
+<h2 id="绘制圆"><a href="#绘制圆" class="headerlink" title="绘制圆"></a>绘制圆</h2><ul>
+<li>arc(x,y,半径,起始弧度,结束弧度,旋转方向)<ul>
+<li>x,y：起始位置</li>
+<li>弧度与角度的关系：弧度=角度*Math.PI/18</li>
+<li>旋转方向：顺时针（默认：false）、逆时针（true)</li>
+</ul>
+</li>
+</ul>
+<h2 id="绘制其他曲线"><a href="#绘制其他曲线" class="headerlink" title="绘制其他曲线"></a>绘制其他曲线</h2><ul>
+<li>acrTo(x1,y1,x2,y2,r)<ul>
+<li>第一组坐标、第二组坐标、半径</li>
+</ul>
+</li>
+<li>auadraticCurveTo(dx,dy,x1,y1)<ul>
+<li>贝塞尔曲线：第一组控制点、第二组结束坐标</li>
+</ul>
+</li>
+<li>bezierCurveTo(dx1,dy1,dx2,dy2,x1,y1)<ul>
+<li>贝塞尔曲线：第一组控制点、第二组控制点、第三组结束坐标</li>
+</ul>
+</li>
+</ul>
+<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><ul>
+<li>translate<ul>
+<li>偏移：从起始点为基准点，移动到当前坐标位置</li>
+</ul>
+</li>
+<li>rotate<ul>
+<li>旋转：参数为弧度</li>
+</ul>
+</li>
+<li>scale<ul>
+<li>缩放</li>
+</ul>
+</li>
+</ul>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><ul>
+<li>等图片加载完，再执行canvas操作<ul>
+<li>图片预加载：在onload中调用方法</li>
+</ul>
+</li>
+<li>drawlmage(olmg,x,y,w,h)<ul>
+<li>olmg:当前图片 x,y:坐标 w,h:宽高</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h2><ul>
+<li>createPattern(olmg,平铺方式)<ul>
+<li>2参为:repeat、repeat-x、repeat-y、no-repeat </li>
+</ul>
+</li>
+</ul>
+<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><ul>
+<li>createLinearGradilent(x1,y1,x2,y2)<ul>
+<li>线性渐变</li>
+<li>第一组参数：起始点坐标、第二组参数：结束点坐标</li>
+<li>addColorStop(位置,颜色) 添加渐变点</li>
+</ul>
+</li>
+<li>createRadialGradient(x1,y1,r1,x2,y2,r2)<ul>
+<li>放射性渐变</li>
+<li>参数：第一个圆的坐标和半径，第二个圆的坐标和半径</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><ul>
+<li>strikeText(文字,x,y)<ul>
+<li>文字边框</li>
+</ul>
+</li>
+<li>fillText(文字,x,y)<ul>
+<li>文字填充<br>*font</li>
+<li>文海做大小：’60px impact’</li>
+</ul>
+</li>
+<li>textAlign<ul>
+<li>默认是start跟left一样的效果 end right center</li>
+</ul>
+</li>
+<li>TextBaseline<ul>
+<li>文字上下的位置的方式默认：alphabetic</li>
+</ul>
+</li>
+<li>measureText()<ul>
+<li>measureText(str) width:只有宽度，没有高度</li>
+</ul>
+</li>
+</ul>
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><ul>
+<li>shadowOffsetX、shadowOffsetY<ul>
+<li>x轴偏移，y轴偏移</li>
+</ul>
+</li>
+<li>shadowBlur<ul>
+<li>高斯模糊值</li>
+</ul>
+</li>
+<li>shadowColor<ul>
+<li>阴影颜色</li>
+</ul>
+</li>
+</ul>
+<h2 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h2><ul>
+<li>getImageData(x,y,w,h)<ul>
+<li>获取图像数据</li>
+</ul>
+</li>
+<li>putImageData(获取图像,x,y)<ul>
+<li>设置新的图像数据</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>Width:一行的像素个数</li>
+<li>Height:一列的像素个数</li>
+<li>data:一个数组，包含每个像素的rgba四个值，注意每个值都在0~255之间的整数</li>
+</ul>
+</li>
+<li>createImageData(w,h)<ul>
+<li>生成新的像素矩阵，初始值是全透明的黑色即（0,0,0）</li>
+<li>像素显字</li>
+</ul>
+</li>
+<li>获取和设置指定坐标<ul>
+<li>封装：getXY，setXY、</li>
+</ul>
+</li>
+<li>图片的像素操作<ul>
+<li>必须是同源下</li>
+</ul>
+</li>
+</ul>
+<h2 id="合成"><a href="#合成" class="headerlink" title="合成"></a>合成</h2><ul>
+<li>全局阿尔法值<ul>
+<li>globalAlpha</li>
+</ul>
+</li>
+<li>覆盖合成<ul>
+<li>源：新的图形</li>
+<li>目标：已经绘制过得图形</li>
+<li>globalCompositeOperation属性</li>
+</ul>
+</li>
+</ul>
+<h2 id="将画布到出为图像"><a href="#将画布到出为图像" class="headerlink" title="将画布到出为图像"></a>将画布到出为图像</h2><ul>
+<li>toDataURL<ul>
+<li>火狐右键可以直接导出图片</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件操作"><a href="#事件操作" class="headerlink" title="事件操作"></a>事件操作</h2><ul>
+<li>isPointInPath<ul>
+<li>是否在点击范围内</li>
+<li>CanvaScript(canvas中的jQuery)</li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/07/18/canvas的基本使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/11/13/JS-数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS-数据类型
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -238,8 +528,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
